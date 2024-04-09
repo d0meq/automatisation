@@ -54,28 +54,28 @@ class SystemMonitorApp:
         self.ax[0].set_ylabel('CPU Usage')
         self.ax[0].set_ylim(0, 100)
         self.ax[0].set_xlim(0, 30)
-        self.cpu_line, = self.ax[0].plot([], [], lw=2)
+        self.cpu_line, = self.ax[0].plot([], [], lw=2)  # Moved here
 
         self.ax[1].set_title('Memory Usage (%)')
         self.ax[1].set_xlabel('Time (s)')
         self.ax[1].set_ylabel('Memory Usage')
         self.ax[1].set_ylim(0, 100)
         self.ax[1].set_xlim(0, 30)
-        self.memory_line, = self.ax[1].plot([], [], lw=2)
+        self.memory_line, = self.ax[1].plot([], [], lw=2)  # Moved here
 
         self.ax[2].set_title('Disk Usage (%)')
         self.ax[2].set_xlabel('Time (s)')
         self.ax[2].set_ylabel('Disk Usage')
         self.ax[2].set_ylim(0, 100)
         self.ax[2].set_xlim(0, 30)
-        self.disk_line, = self.ax[2].plot([], [], lw=2)
+        self.disk_line, = self.ax[2].plot([], [], lw=2)  # Moved here
 
         self.ax[3].set_title('Network Usage (Bytes)')
         self.ax[3].set_xlabel('Time (s)')
         self.ax[3].set_ylabel('Network Usage')
         self.ax[3].set_xlim(0, 30)
-        self.bytes_sent_line, = self.ax[3].plot([], [], label='Bytes Sent', lw=2)
-        self.bytes_received_line, = self.ax[3].plot([], [], label='Bytes Received', lw=2)
+        self.bytes_sent_line, = self.ax[3].plot([], [], label='Bytes Sent', lw=2)  # Moved here
+        self.bytes_received_line, = self.ax[3].plot([], [], label='Bytes Received', lw=2)  # Moved here
         self.ax[3].legend(loc='upper right')
 
         self.canvas = FigureCanvasTkAgg(self.fig, master=self.graph_frame)
